@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOGGY WORLD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-button {
+            background: #444;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: none;
+            position: fixed;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 110px;
+        }
+
+        .dropdown a {
+            display: block;
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .dropdown a:hover {
+            background: #ddd;
+        }
+
+        .menu:hover .dropdown {
+            display: block;
+        }
+
+        .gallery {
+            margin-top: 80px; 
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            
+            font-size: large;
+            text-align:justify;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration:dotted;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .dog-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 20px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .dog-section img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .footer {
+            text-align: right;
+            padding: 20px;
+            background: #222;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a img {
+            margin: 10px;
+            width: 40px;
+            transition: transform 0.3s;
+        }
+
+        .footer a img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">WE ARE DOGGIES</div>
+        <div class="menu">
+            <button class="menu-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" alt="Menu">
+            </button>
+            <div class="dropdown">
+                <a href="home.html">Home</a>
+                <a href="about us.html">About Us</a>
+                <a href="contact us.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <p><h1>Our most selling breeds</h1></p><br><br>
+        <img src="dog1.jpg" alt="Image 1">
+        <img src="dog4.jpg" alt="Image 2">
+        <img src="dog5.jpg" alt="Image 3">
+        <img src="dog6.jpg" alt="Image 4">
+    </div>
+
+    <div class="dog-section">
+        <img src="dog5.jpg" alt="Husky">
+        <div>
+            <h1>Husky</h1><br>
+            <p><h2>The Siberian Husky is a medium-sized working dog breed. </p>
+                They are known for their thick fur coat, striking blue or multi-colored eyes, and friendly nature.</p> 
+                Huskies are intelligent and highly energetic, making them great companions for active individuals.</p></h2>
+        </div>
+    </div>
+
+    <div class="dog-section">
+        <img src="dog4.jpg" alt="German Shepherd">
+        <div>
+            <h1>German Shepherd</h1><br>
+            <p><h2>The German Shepherd is a highly intelligent and versatile breed.</p>
+                They are often used as police and military dogs due to their loyalty, courage, and trainability. </p>
+                German Shepherds make excellent family pets and are very protective of their owners.</p></h2>
+        </div>
+    </div>
+
+    <div class="dog-section">
+        <img src="dog3.jpg" alt="Labrador Retriever">
+        <div>
+            <h1>Labrador Retriever</h1><br>
+            <p><h2>The Labrador Retriever is one of the most popular dog breeds. </p>
+                Labs are known for their friendly and outgoing personality. </p>
+                They are great with families and excel in various activities, including service work, hunting, and companionship.</p></h2>
+        </div>
+    </div>
+
+    <div class="dog-section">
+        <img src="dog6.jpg" alt="Rottweiler">
+        <div>
+            <h1>Rottweiler</h1><br>
+            <p><h2>Rottweilers are strong, confident dogs known for their guarding abilities.</h2></p>
+                <h2>They are highly loyal and protective of their families.</h2> </p>
+                <h2>With proper training and socialization, Rottweilers can be gentle, loving, and excellent companions.</h2></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Support Us</p>
+        <label for="email">Enter email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <a href="https://www.instagram.com/_swag._.boy._/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://wa.link/tdcxyh" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100024294162058" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+    </div>
+</body>
+</html>

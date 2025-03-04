@@ -1,0 +1,2090 @@
+CSS Selectors
+
+The CSS element Selector
+The element selector selects HTML elements based on the element name.
+
+Example
+Here, all <p> elements on the page will be center-aligned, with a red text color: 
+
+p {
+  text-align: center;
+  color: red;
+}
+<!------------------->
+The CSS id Selector
+The id selector uses the id attribute of an HTML element to select a specific element.
+
+The id of an element is unique within a page, so the id selector is used to select one unique element!
+
+To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+
+Example
+The CSS rule below will be applied to the HTML element with id="para1": 
+
+#para1 {
+  text-align: center;
+  color: red;
+}
+<!------------------->
+
+The CSS class Selector
+The class selector selects HTML elements with a specific class attribute.
+
+To select elements with a specific class, write a period (.) character, followed by the class name.
+
+Example 1
+In this example all HTML elements with class="center" will be red and center-aligned: 
+
+.center {
+  text-align: center;
+  color: red;
+}
+
+
+Example 2
+In this example only <p> elements with class="center" will be red and center-aligned: 
+
+p.center {
+  text-align: center;
+  color: red;
+}
+<!------------------->
+The CSS Universal Selector
+The universal selector (*) selects all HTML elements on the page.
+
+Example
+The CSS rule below will affect every HTML element on the page: 
+
+* {
+  text-align: center;
+  color: blue;
+}
+<!------------------->
+The CSS Grouping Selector
+
+Example
+In this example we have grouped the selectors from the code above: 
+
+h1, h2, p {
+  text-align: center;
+  color: red;
+}
+<!------------------------------------------------------------------------------------------------------------------------->
+
+How To Add CSS
+External style
+
+Example
+External styles are defined within the <link> element, inside the <head> section of an HTML page:
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+<!-------------------------------->
+
+Internal CSS
+
+Example
+Internal styles are defined within the <style> element, inside the <head> section of an HTML page:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+<!----------------->
+Inline CSS
+
+Example
+Inline styles are defined within the "style" attribute of the relevant element:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:blue;text-align:center;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p>
+
+</body>
+</html>
+<!----------------->
+
+Multiple Style Sheets
+If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. 
+
+Assume that an external style sheet has the following style for the <h1> element:
+
+h1 {
+  color: navy;
+}
+Then, assume that an internal style sheet also has the following style for the <h1> element:
+
+h1 {
+  color: orange;   
+}
+Example
+If the internal style is defined after the link to the external style sheet, the <h1> elements will be "orange":
+
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<style>
+h1 {
+  color: orange;
+}
+</style>
+</head>
+Example
+However, if the internal style is defined before the link to the external style sheet, the <h1> elements will be "navy": 
+
+<head>
+<style>
+h1 {
+  color: orange;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<!------------------------------------------------------------------------------------------------------------------------------>
+
+CSS Colors
+
+CSS Background Color
+
+Example
+<h1 style="background-color:DodgerBlue;">Hello World</h1>
+<p style="background-color:Tomato;">Lorem ipsum...</p>
+<!------------------------->
+CSS Text Color
+
+
+Example
+<h1 style="color:Tomato;">Hello World</h1>
+<p style="color:DodgerBlue;">Lorem ipsum...</p>
+<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+<!------------------------->
+
+CSS Border Color
+
+Example
+<h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1>
+<!------------------------->
+CSS Color Values
+
+Example
+<h1 style="background-color:rgb(255, 99, 71);">...</h1>
+<h1 style="background-color:#ff6347;">...</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
+
+<!----------------------->
+
+CSS Backgrounds
+
+CSS background-color
+
+Example
+The background color of a page is set like this:
+
+body {
+  background-color: lightblue;
+}
+<!-------------------------->
+
+Opacity / Transparency
+
+The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:
+
+Example
+div {
+  background-color: green;
+  opacity: 0.3;
+}
+<!-------------------------->
+CSS Background Image
+
+Example
+
+body {
+  background-image: url("paper.gif");
+}
+
+<!-------------------------->
+
+CSS Background Image Repeat
+
+Example
+body {
+  background-image: url("gradient_bg.png");
+  background-repeat: repeat-x;
+}
+
+Example
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+}
+
+
+CSS background-position
+
+Example
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+<!----------------------------->
+
+CSS Background Attachment
+
+Example 1
+Specify that the background image should be fixed:
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+
+Example 2
+Specify that the background image should scroll with the rest of the page:
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+}
+
+<!----------------------------->
+CSS background - Shorthand property
+
+Example
+Use the shorthand property to set the background properties in one declaration:
+
+body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+}
+<!------------------------------------------------------------------------------------------------------------------------->
+CSS Borders
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+</style>
+</head>
+<body>
+<!------------------------------->
+
+CSS Border Width
+
+Example
+Demonstration of the different border widths:
+
+p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+
+p.two {
+  border-style: solid;
+  border-width: medium;
+}
+
+p.three {
+  border-style: dotted;
+  border-width: 2px;
+}
+
+p.four {
+  border-style: dotted;
+  border-width: thick;
+}
+<!---------------------------->
+Specific Side Widths
+The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border):
+
+Example
+p.one {
+  border-style: solid;
+  border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+}
+
+p.two {
+  border-style: solid;
+  border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+}
+
+p.three {
+  border-style: solid;
+  border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+}
+<!---------------------------->
+CSS Border Color
+
+Example
+Demonstration of the different border colors:
+
+p.one {
+  border-style: solid;
+  border-color: red;
+}
+
+p.two {
+  border-style: solid;
+  border-color: green;
+}
+<!---------------------------->
+Example
+p.one {
+  border-style: solid;
+  border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+}
+<!---------------------------->
+
+HEX Values
+The color of the border can also be specified using a hexadecimal value (HEX):
+
+Example
+p.one {
+  border-style: solid;
+  border-color: #ff0000; /* red */
+}
+RGB Values
+Or by using RGB values:
+
+Example
+p.one {
+  border-style: solid;
+  border-color: rgb(255, 0, 0); /* red */
+}
+HSL Values
+You can also use HSL values:
+
+Example
+p.one {
+  border-style: solid;
+  border-color: hsl(0, 100%, 50%); /* red */
+}
+<!---------------------------->
+
+CSS Border Sides
+
+Example
+p {
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+<!-------------------------->
+
+CSS Shorthand Border Property
+
+Example
+p {
+  border: 5px solid red;
+}
+<!-------------------------->
+CSS Rounded Borders
+
+Example
+p {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+<!----------------------------------------------------------------------------------------------------------------------->
+
+CSS Margins
+
+Example
+Set different margins for all four sides of a <p> element:
+
+p {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+<!-------------------------->
+
+Margin - Shorthand Property
+
+Example
+Use the margin shorthand property with four values:
+
+p {
+  margin: 25px 50px 75px 100px;
+}
+
+<!-------------------------->
+
+The auto Value
+Example
+Use margin: auto:
+
+div {
+  width: 300px;
+  margin: auto;
+  border: 1px solid red;
+}
+<!-------------------------->
+
+CSS Margin Collapse
+Sometimes two margins collapse into a single margin.
+
+Example
+
+h1 {
+  margin: 0 0 50px 0;
+}
+
+h2 {
+  margin: 20px 0 0 0;
+}
+<!---------------------------------------------------------------------------------------------------------------------->
+
+CSS Padding
+
+Example
+Set different padding for all four sides of a <div> element:  
+
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+<!----------------------->
+Padding - Shorthand Property
+
+div {
+  padding: 25px 50px 75px 100px;
+}
+<!----------------------->
+
+Padding and Element Width
+
+Example 1 
+
+
+div {
+  width: 300px;
+  padding: 25px;
+}
+
+Example 2
+Use the box-sizing property to keep the width at 300px, no matter the amount of padding:
+
+div {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+<!----------------------------------------------------------------------------------------------------------------->
+
+CSS Height, Width and Max-width
+
+Example 1
+Set the height and width of a <div> element:
+
+div {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+}
+<!------------------------>
+Setting max-width
+
+div {
+  max-width: 500px;
+  height: 100px;
+  background-color: powderblue;
+}
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+CSS Box Model
+
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+</style>
+</head>
+<body>
+
+<h2>Demonstrating the Box Model</h2>
+
+<p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+
+<div>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+</body>
+</html>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+CSS Outline
+
+Example
+Demonstration of the different outline styles:
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+<!------------------------------>
+CSS Outline Width
+
+Example
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+
+p.ex2 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+}
+
+p.ex3 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+}
+
+p.ex4 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 4px;
+}
+<!------------------------------>
+
+CSS Outline Color
+
+Example
+p.ex1 {
+  border: 2px solid black;
+  outline-style: solid;
+  outline-color: red;
+}
+
+p.ex2 {
+  border: 2px solid black;
+  outline-style: dotted;
+  outline-color: blue;
+}
+
+p.ex3 {
+  border: 2px solid black;
+  outline-style: outset;
+  outline-color: grey;
+}
+<!------------------------------>
+HEX Values
+The outline color can also be specified using a hexadecimal value (HEX):
+
+Example
+p.ex1 {
+  outline-style: solid;
+  outline-color: #ff0000; /* red */
+}
+<!------------------------------>
+RGB Values
+Or by using RGB values:
+
+Example
+p.ex1 {
+  outline-style: solid;
+  outline-color: rgb(255, 0, 0); /* red */
+}
+<!------------------------------>
+HSL Values
+You can also use HSL values:
+
+Example
+p.ex1 {
+  outline-style: solid;
+  outline-color: hsl(0, 100%, 50%); /* red */
+}
+<!------------------------------->
+
+CSS Outline Shorthand
+
+Example
+p.ex1 {outline: dashed;}
+p.ex2 {outline: dotted red;}
+p.ex3 {outline: 5px solid yellow;}
+p.ex4 {outline: thick ridge pink;}
+<!------------------------------->
+
+CSS Outline Offset
+
+Example 1
+p {
+  margin: 30px;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+
+
+Example 2
+p {
+  margin: 30px;
+  background: yellow;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+
+<!------------------------------------------------------------------------------------------------------------------------->
+
+CSS Text
+
+Example
+body {
+  color: blue;
+}
+
+h1 {
+  color: green;
+}
+<!-------------------------->
+Text Color and Background Color
+
+Example
+body {
+  background-color: lightgrey;
+  color: blue;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+}
+
+div {
+  background-color: blue;
+  color: white;
+}
+
+<!-------------------------->
+
+CSS Text Alignment
+Text Alignment and Text Direction
+
+Example
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+<!-------------------------->
+When the text-align property is set to "justify", each line is stretched so that every line has equal width, and the left and right margins are straight (like in magazines and newspapers):
+
+Example
+div {
+  text-align: justify;
+}
+
+<!-------------------------->
+Text Align Last
+
+Example
+Align the last line of text in three <p> elements:
+
+p.a {
+  text-align-last: right;
+}
+
+p.b {
+  text-align-last: center;
+}
+
+p.c {
+  text-align-last: justify;
+}
+<!-------------------------->
+Text Direction
+The direction and unicode-bidi properties can be used to change the text direction of an element:
+
+Example
+p {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+<!-------------------------->s
+Vertical Alignment
+The vertical-align property sets the vertical alignment of an element.
+
+Example
+
+
+img.a {
+  vertical-align: baseline;
+}
+
+img.b {
+  vertical-align: text-top;
+}
+
+img.c {
+  vertical-align: text-bottom;
+}
+
+img.d {
+  vertical-align: sub;
+}
+
+img.e {
+  vertical-align: super;
+}
+
+<!-------------------------->
+
+CSS Text Decoration
+Text Decoration
+
+Example
+h1 {
+  text-decoration-line: overline;
+}
+
+h2 {
+  text-decoration-line: line-through;
+}
+
+h3 {
+  text-decoration-line: underline;
+}
+
+p {
+  text-decoration-line: overline underline;
+}
+<!--------------------------->
+Specify a Color for the Decoration Line
+
+Example
+h1 {
+  text-decoration-line: overline;
+  text-decoration-color: red;
+}
+
+h2 {
+  text-decoration-line: line-through;
+  text-decoration-color: blue;
+}
+
+h3 {
+  text-decoration-line: underline;
+  text-decoration-color: green;
+}
+
+p {
+  text-decoration-line: overline underline;
+  text-decoration-color: purple;
+}
+<!--------------------------->
+
+Specify a Style for the Decoration Line
+
+Example
+h1 {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+h2 {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
+
+h3 {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+p.ex1 {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+
+p.ex2 {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+p.ex3 {
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  text-decoration-style: wavy;
+}
+
+<!--------------------------->
+Specify the Thickness for the Decoration Line
+Example
+h1 {
+  text-decoration-line: underline;
+  text-decoration-thickness: auto;
+}
+
+h2 {
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
+}
+
+h3 {
+  text-decoration-line: underline;
+  text-decoration-thickness: 25%;
+}
+
+p {
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  text-decoration-style: double;
+  text-decoration-thickness: 5px;
+}
+<!--------------------------->
+The Shorthand Property
+
+Example
+h1 {
+  text-decoration: underline;
+}
+
+h2 {
+  text-decoration: underline red;
+}
+
+h3 {
+  text-decoration: underline red double;
+}s
+
+p {
+  text-decoration: underline red double 5px;
+}
+<!--------------------------->
+CSS Text Transformation
+
+It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word:
+
+Example
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+<!--------------------------->
+
+CSS Text Spacing
+Text Spacing
+
+Example
+p {
+  text-indent: 50px;
+}
+<!--------------------------->
+Letter Spacing
+
+Example
+h1 {
+  letter-spacing: 5px;
+}
+
+h2 {
+  letter-spacing: -2px;
+}
+<!--------------------------->
+Line Height
+The line-height property is used to specify the space between lines:
+
+Example
+p.small {
+  line-height: 0.8;
+}
+
+p.big {
+  line-height: 1.8;
+}
+<!--------------------------->
+Word Spacing
+The word-spacing property is used to specify the space between the words in a text.
+
+The following example demonstrates how to increase or decrease the space between words:
+
+Example
+p.one {
+  word-spacing: 10px;
+}
+
+p.two {
+  word-spacing: -2px;
+}
+<!--------------------------->
+White Space
+The white-space property specifies how white-space inside an element is handled.
+
+This example demonstrates how to disable text wrapping inside an element:
+
+Example
+p {
+  white-space: nowrap;
+}
+<!--------------------------->
+
+CSS Text Shadow
+
+Text shadow effect!
+Example 1
+h1 {
+  text-shadow: 2px 2px;
+}
+
+
+Example 2
+h1 {
+  text-shadow: 2px 2px red;
+}
+
+Example 3
+h1 { 
+  text-shadow: 2px 2px 5px red;
+}
+
+Example 4
+Text-shadow on a white text:
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+Example 5
+Text-shadow with red neon glow:
+
+h1 {
+  text-shadow: 0 0 3px #ff0000;
+}
+
+Example 6
+Text-shadow with red and blue neon glow:
+
+h1 {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+
+Example 7
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+<!------------------------------------------------------------------------------------------------------------------------->
+
+CSS Fonts
+
+The CSS font-family Property
+Example
+Specify some different fonts for three paragraphs:
+
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+<!---------------------------->
+
+CSS Font Style
+
+Example
+p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}
+<!---------------------------->
+Font Weight
+The font-weight property specifies the weight of a font:
+
+Example
+p.normal {
+  font-weight: normal;
+}
+
+p.thick {
+  font-weight: bold;
+}
+<!---------------------------->
+Font Variant
+
+Example
+p.normal {
+  font-variant: normal;
+}
+
+p.small {
+  font-variant: small-caps;
+}
+<!---------------------------->
+Set Font Size With Pixels
+Setting the text size with pixels gives you full control over the text size:
+
+Example
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+<!----------------------------------------------------------------------------------------------------------------------->
+
+CSS Icons
+
+Font Awesome Icons
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<i class="fas fa-cloud"></i>
+<i class="fas fa-heart"></i>
+<i class="fas fa-car"></i>
+<i class="fas fa-file"></i>
+<i class="fas fa-bars"></i>
+
+</body>
+</html>
+
+<!-------------------------------------------------------------------------------------------------------------------->
+
+CSS Links
+
+Styling Links
+
+Example
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+<!---------------------->
+Text Decoration
+The text-decoration property is mostly used to remove underlines from links:
+
+Example
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+<!---------------------->
+Background Color
+The background-color property can be used to specify a background color for links:
+
+Example
+a:link {
+  background-color: yellow;
+}
+
+a:visited {
+  background-color: cyan;
+}
+
+a:hover {
+  background-color: lightgreen;
+}
+
+a:active {
+  background-color: hotpink;
+} 
+<!------------------------------------------------------------------------------------------------------------------------->
+
+CSS Lists
+
+Example
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+
+<!----------------------------->
+List - Shorthand property
+
+The list-style property is a shorthand property. It is used to set all the list properties in one declaration:
+
+Example
+ul {
+  list-style: square inside url("sqpurple.gif");
+}
+
+<!----------------------------->
+Styling List With Colors
+
+
+Example
+ol {
+  background: #ff9999;
+  padding: 20px;
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+
+ol li {
+  background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
+<!------------------------------------------------------------------------------------------------------------------------->
+
+CSS Tables
+The look of an HTML table can be greatly improved with CSS:
+
+Table Borders
+
+Example
+table, th, td {
+  border: 1px solid;
+}
+<!------------------------->
+Full-Width Table
+
+Example
+table {
+  width: 100%;
+}
+<!------------------------->
+Collapse Table Borders
+
+Example
+table {
+  border-collapse: collapse;
+}
+
+<!----------------------------->
+
+Table Width and Height
+
+Example
+table {
+  width: 100%;
+}
+
+th {
+  height: 70px;
+}
+
+<!------------------------------->
+
+Horizontal Alignment
+ 
+Example 1 
+td {
+  text-align: center;
+}
+
+Example 2
+th {
+  text-align: left;
+}
+<!------------------------------->
+Vertical Alignment
+
+The vertical-align property sets the vertical alignment (like top, bottom, or middle)
+
+Example
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+<!------------------------------->
+CSS Table Style
+
+Example
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+<!------------------------------->
+
+Horizontal Dividers
+
+Example
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+<!------------------------------->
+Striped Tables
+
+Example
+tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+<!------------------------------->
+Table Color
+
+Example
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+<!------------------------------->
+Responsive Table
+
+Example
+<div style="overflow-x:auto;">
+
+<table>
+... table content ...
+</table>
+
+</div>
+
+<!------------------------------------------------------------------------------------------------------------------->
+
+CSS Layout - The display Property
+
+Example 1 :
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+li {
+  display: inline;
+}
+</style>
+</head>
+<body>
+
+<p>Display a list of links as a horizontal menu:</p>
+
+<ul>
+  <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+  <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+  <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+</ul>
+
+</body>
+</html>
+<!------------------------------->
+Example 2 :
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+span {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<h1>Display span elements as block elements</h1>
+
+<span>A display property with</span> <span>a value of "block" results in</span> <span>a line break between each span elements.</span>
+
+</body>
+</html>
+
+<!------------------------------------------------------------------------------------------------------------------->
+
+CSS Layout - The position Property
+
+position: static;
+
+Example
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+<!------------------------------->
+position: relative;
+
+Example
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+<!------------------------------->
+position: fixed;
+
+Example
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+<!------------------------------->
+position: absolute;
+
+Example
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+}
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+
+<!------------------------------->
+position: sticky;
+
+Example
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+<!------------------------------------------------------------------------------------------------------------------->
+
+CSS Layout - The z-index Property
+
+
+The z-index Property
+
+Example
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+<!------------------------------>
+Another z-index Example
+
+Example
+Here we see that an element with greater stack order is always above an element with a lower stack order:
+
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 2;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 3;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
+
+</body>
+</html>
+
+<!--------------------------->
+Without z-index
+
+Example
+Same example as above, but here with no z-index specified:
+
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
+
+</body>
+</html>
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+CSS Layout - Overflow
+
+Example 1
+div {
+  width: 200px;
+  height: 65px;
+  background-color: coral;
+  overflow: visible;
+}
+<!--------------------------->
+Example 2
+div {
+  overflow: hidden;
+}
+<!--------------------------->
+Example 3
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: coral;
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  overflow: scroll;
+}
+</style>
+</head>
+<body>
+
+<h2>Overflow: scroll</h2>
+
+<p>Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):</p>
+
+<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+</body>
+</html>
+ <!--------------------------->
+Example 4
+div {
+  overflow: auto;
+}
+<!--------------------------->
+Example 5
+div {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: scroll; /* Add vertical scrollbar */
+}
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+CSS Layout - float and clear
+
+The float Property
+
+Example - float: right;
+
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  float: right;
+}
+</style>
+</head>
+<body>
+
+<h2>Float Right</h2>
+
+<p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+<p><img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+</body>
+</html>
+
+<!----------------------->
+Example - float: left;
+
+Example
+img {
+  float: left;
+}
+
+<!----------------------------->
+Example - No float
+
+Example
+img {
+  float: none;
+}
+<!------------------------------------------------------------------------------------------------------------------------->
+
+CSS Layout - clear and clearfix
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.div1 {
+  float: left;
+  padding: 10px;
+  border: 3px solid #73AD21;
+}
+
+.div2 {
+  padding: 10px;
+  border: 3px solid red;
+}
+
+.div3 {
+  float: left;
+  padding: 10px;  
+  border: 3px solid #73AD21;
+}
+
+.div4 {
+  padding: 10px;
+  border: 3px solid red;
+  clear: left;
+}
+</style>
+</head>
+<body>
+
+<h2>Without clear</h2>
+<div class="div1">div1</div>
+<div class="div2">div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>
+<br><br>
+
+<h2>With clear</h2>
+<div class="div3">div3</div>
+<div class="div4">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+</body>
+</html>
+
+<!------------------------------------------------------------------------------------------------------------------------->
+
+Center Align Elements
+To horizontally center a block element (like <div>), use margin: auto;
+
+Example
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+<!---------------------------->
+Center Align Text
+
+Example
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
+<!---------------------------->
+Center an Image
+To center an image, set left and right margin to auto and make it into a block element:
+
+Paris
+Example
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+<!---------------------------->
+Left and Right Align - Using position
+
+Example
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+<!---------------------------->
+Left and Right Align - Using float
+Another method for aligning elements is to use the float property:
+
+Example
+.right {
+  float: right;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+<!---------------------------->s
+
+Without Clearfix
+
+With Clearfix
+
+Then we can add the clearfix hack to the containing element to fix this problem:
+
+Example
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+<!---------------------------->
+Center Vertically - Using paddings
+
+Example
+.center {
+  padding: 70px 0;
+  border: 3px solid green;
+}
+<!---------------------------->
+To center both vertically and horizontally, use padding and text-align: center:
+
+Example
+.center {
+  padding: 70px 0;
+  border: 3px solid green;
+  text-align: center;
+}
+
+<!---------------------------->
+Center Vertically - Using line-height
+
+Example
+.center {
+  line-height: 200px;
+  height: 200px;
+  border: 3px solid green;
+  text-align: center;
+}
+<!---------------------------->
+Center Vertically - Using position & transform
+
+Example
+.center {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+<!---------------------------->
+Center Vertically - Using Flexbox
+
+Example
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
+<!------------------------------------------------------------------------------------------------------------------------->
+CSS Grid Layout Module
+
+Example 1
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>Grid Elements</h1>
+
+<p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
+
+<p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+</body>
+</html>
+
+<!-------------------------------------->
+Example 2
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.item5 {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+}
+</style>
+</head>
+<body>
+
+<h1>A Five Items Grid Layout</h1>
+
+<div class="grid-container">
+  <div class="grid-item item1">1</div>
+  <div class="grid-item item2">2</div>
+  <div class="grid-item item3">3</div>  
+  <div class="grid-item item4">4</div>
+  <div class="grid-item item5">5</div>
+</div>
+
+<p>Direct child elements(s) of the grid container automatically becomes grid items.</p>
+
+<p>Item 1, 2, and 5 are set to span multiple columns or rows.</p>
+
+</body>
+</html>
+
+
+<!---------------------------------------------------------------------------------------------------------------------->
+CSS Flexbox
+Example 1
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+<h1>Flexible Boxes</h1>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+</div>
+
+<p>Try to resize the browser window.</p>
+<p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+<p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+</body>
+</html>
+<!-------------------------->
+
+Example 2
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+}
+
+.flex-container > div {
+  background-color: DodgerBlue;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>The flex-grow Property</h1>
+
+<p>Make the third flex item grow eight times faster than the other flex items:</p>
+
+<div class="flex-container">
+  <div style="flex-grow: 1">1</div>
+  <div style="flex-grow: 1">2</div>
+  <div style="flex-grow: 8">3</div>
+</div>
+
+</body>
+</html>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+C,C++ Training Requirements
+
+We are looking a corporate trainer who can deliver below content.
+
+Travel Food Allowance - will be taken care by us.
+
+Minimum experience - 4+ 
+
+please share your profiles to techycorpsolutions@gmail.com
+
+Topics:
+1. C - Programming Fundamentals
+2. C++ - Concepts Of Object Oriented Programming
+3. c++ - Implementing Classes and Objects
+4. C++ - Constructors and Destructors
+5. C++ - Functions
+6. C++ - Pointer and References
+7. C++ - Inheritance, Polymorphism
+8. C++ - Operator Overloading
+9. C++ - File Handling
+10. C++ - Introduction to Exception Handling
+11. C++ - Introduction to Templates
+12. C++ - Standard Template Library Generic Programming using STL

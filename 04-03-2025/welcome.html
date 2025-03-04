@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student's Connect</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 0vh;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+                padding: 20px;
+                border: 2px solid black;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <header>STUDENT'S CONNECT</header>
+        <div class="container">
+          <form action="/action_page.php" method="post">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday"><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </form> 
+        </div>
+    </body>
+</html>
