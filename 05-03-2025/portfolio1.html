@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: grid;
+            gap: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .profile-pic {
+            width: 130px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .description {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px;
+            background: #e0e0e0;
+            border-radius: 8px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        .box {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            min-height: 150px;
+        }
+        .box1 {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            min-height: 250px;
+        }
+        .footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .footer img {
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h2>Bharat P</h2>
+                <p>Computer Science Engineering</p>
+                <p>Sathyabama Institute of Science and Technology</p>
+            </div>
+            <img src="photo.jpeg" alt="Profile Photo" class="profile-pic">
+        </div>
+        <hr width="100%;" color="black" size="5">
+        <div class="description">
+            "Computer Science Engineering student with a passion for networking, hardware, IoT, and front-end development."
+        </div>
+        <div class="grid">
+            <div class="box">
+                <h3>10th Details</h3>
+                <p>Vedic Vidyashram Senior Secondary School (CBSE)</p>
+                <p>Scored 85%</p>
+            </div>
+            <div class="box">
+                <h3>12th Details</h3>
+                <p>Vedic Vidyashram Senior Secondary School (CBSE)</p>
+                <p>Scored 69%</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="box1">
+                <h3>Awards/Achievements</h3>
+                <ul>
+                    <li>1st Prize in College Hackathon "Soil Health Monitoring System"</li>
+                    <li>National Karate Champion</li>
+                </ul>
+            </div>
+            <div class="box1">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Front-End (HTML, CSS, JS)</li>
+                </ul>
+            </div>
+            <div class="box1">
+                <h3>Projects</h3>
+                <ul>
+                    <li>Soil Health Monitoring System</li>
+                    <li>Health Monitoring System</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="margin: 0; padding: 0;">
+        <hr style="margin: 0; padding: 0;">
+       
+        <div class="footer">
+            <a href="mailto:btbharat005@gmail.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo">
+            </a>
+            <a href="https://www.linkedin.com/in/bharat-p-0aa4ba2b2/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

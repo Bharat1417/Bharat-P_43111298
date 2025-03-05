@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Grid Layout</title>
+<style>
+  body{
+    box-sizing: content-box;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+  }
+
+  .grid-container :hover {
+    transform: scale(1.02); 
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grid-item img {
+    width: 100%;  /* Fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure it does not exceed the grid */
+    border-radius: 15px; /* Adds curved edges */
+  }
+
+  /* Adjust specific items */
+  .item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .item2 {
+    grid-column: 3 / span 3;
+    grid-row: 1 / span 3;
+  }
+
+  .item5 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+</style>
+</head>
+<body>
+
+<h1 style="text-align: center;">A Five Items Grid Layout</h1>
+
+<div class="grid-container">
+  <div class="grid-item item1"><img src="dog1.jpg" alt="dog1"></div>
+  <div class="grid-item item2"><img src="dog2.jpg" alt="dog2" style="height: 3000px;"></div>
+  <div class="grid-item"><img src="dog3.jpg" alt="dog3"></div>  
+  <div class="grid-item"><img src="dog4.jpg" alt="dog4"></div>
+  <div class="grid-item item5"><img src="dog5.jpg" alt="dog5"></div>
+</div>
+
+</body>
+</html>
