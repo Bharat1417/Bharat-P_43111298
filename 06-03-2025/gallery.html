@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Image Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #ff6b6b, #ffcc5c, #ffee58, #69f0ae, #64b5f6, #ba68c8);
+            background-size: 300% 300%;
+            animation: gradientMove 5s infinite alternate;
+        }
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        .box:hover img {
+            transform: scale(1.1);
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"><img src="img1.jpg" alt="Image 1"></div>
+        <div class="box"><img src="img2.jpg" alt="Image 2"></div>
+        <div class="box"><img src="img3.jpg" alt="Image 3"></div>
+        <div class="box"><img src="img4.jpg" alt="Image 4"></div>
+        <div class="box"><img src="img5.jpg" alt="Image 5"></div>
+        <div class="box"><img src="img6.jpg" alt="Image 6"></div>
+        <div class="box"><img src="img7.jpg" alt="Image 7"></div>
+        <div class="box"><img src="img8.jpg" alt="Image 8"></div>
+        <div class="box"><img src="img9.jpg" alt="Image 9"></div>
+        <div class="box"><img src="img10.jpg" alt="Image 10"></div>
+        <div class="box"><img src="img11.jpg" alt="Image 11"></div>
+        <div class="box"><img src="img12.jpg" alt="Image 12"></div>
+        <div class="box"><img src="img13.jpg" alt="Image 13"></div>
+        <div class="box"><img src="img14.jpg" alt="Image 14"></div>
+        <div class="box"><img src="img15.jpg" alt="Image 15"></div>
+    </div>
+</body>
+</html>
