@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>Food Delivery App</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: "Montserrat", sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url('./assests/bg3.avif') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .navbar {
+            width: 100%;
+            height: 50px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #1212121b;
+            border: 1px solid #121212;
+        }
+        .nav-brand {
+            height: 80%;
+            padding: 0px 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+        }
+        .nav-info {
+            height: 80%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-info > a {
+            padding: 5px 10px;
+            margin: 3px;
+            text-decoration: none;
+            color: #121212;
+        }
+        .nav-signup {
+            height: 80%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-signup > img , .nav-signup > button {
+            margin: 10px;
+        }
+        .btn-signup {
+            background-color: #12121200;
+            padding: 8px 15px;
+            border: 1px solid #121212;
+            border-radius: 10px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .poster {
+            width: 80%;
+            height: 300px;
+            margin: 40px 0px;
+            border-radius: 20px;
+        }
+        .poster-info {
+            width: 100%;
+            height: 300px;
+            border-radius: 20px;
+
+            background-color: seagreen;
+            margin-top: -304px;
+            color: #ffffff;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .poster-info > h2 , .poster-info > p {
+            width: 50%;
+            text-align: center;
+        }
+        .expore {
+            width: 80%;
+            /* background-color: salmon; */
+            margin-bottom: 100px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            border-bottom: 1.5px solid #121212;
+        }
+        .expore-items {
+            width: 100%;   
+            height: 190px;    
+            display: flex;     
+            flex-direction: row;    
+            align-items: center;   
+            overflow-y:hidden;          
+            padding: 10px 0;
+        }
+        .food-item {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .food-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: steelblue;
+            }
+            .nav-info, .poster-info > p{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-brand">
+            <h1 style="font-family: 'Comic Sans MS', cursive; font-size: 20px; color: #ff0000; text-shadow: 2px 2px 5px #ff5722;">
+                🍔 Hunger Haven 🍕
+            </h1>
+        </div>
+        
+        <div class="nav-info">
+            <a href="/">Home</a>
+            <a href="/">Menu</a>
+            <a href="/">Contact us</a>
+        </div>
+        <div class="nav-signup">
+            <img src="./assests/cart.png" />
+            <button class="btn-signup">Sign up</button>
+        </div>
+    </div>
+    <div class="poster">
+        <img src="./assests/background.jpg" style="object-fit: cover; width: 100%; height: 100%; border-radius: 20px;"/>
+        <div class="poster-info">
+            <h2>Order your favorite food here</h2>
+            <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise.</p>
+            <button class="btn-signup" style="background-color: #ffffff;">View Menu</button>
+        </div>
+    </div>
+    <div class="expore">
+        <h2>Explore our menu</h2>
+        <p>Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
+        <div class="expore-items">
+            <div class="food-item">
+                <img src="./assests/salad1.jpg"/>
+                <p>Salad</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/biriyani.jpg"/>
+                <p>Biriyani</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/chicken roll.jpg"/>
+                <p>Rolls</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/shawarma.jpg"/>
+                <p>Shawarma</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/dosa.jpg"/>
+                <p>Dosa</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/naan.jpg"/>
+                <p>Naan</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/ff.jpg"/>
+                <p>French Fries</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/grill.jpg"/>
+                <p>Grill</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/burger.webp"/>
+                <p>Burger</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/dessert.jpg"/>
+                <p>Dessert</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/drink.webp"/>
+                <p>Drink</p>
+            </div>
+            <div class="food-item">
+                <img src="./assests/fish.jpg"/>
+                <p>Fish</p>
+            </div>
+        
+        </div>
+    </div>
+</body>
+</html>
